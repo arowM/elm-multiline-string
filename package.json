@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "dependencies": {
+    "elm": "^0.19.1-5",
+    "elm-doc-preview": "^5.0.5",
+    "elm-format": "^0.8.7",
+    "elm-review": "^2.10.2",
+    "elm-test": "^0.19.1-revision9",
+    "elm-verify-examples": "^5.2.0"
+  },
+  "scripts": {
+    "start": "elm-doc-preview -p 8091",
+    "format": "elm-format src",
+    "review": "elm-review --fix src",
+    "verify-examples": "elm-verify-examples -r -w --fail-on-warn --elm-test $(npm bin)/elm-test",
+    "test": "npm run verify-examples && elm-review src && elm-format --validate src/ && elm-doc-preview --output /dev/null"
+  },
+  "author": "Sakura-chan the Goat",
+  "license": "MIT",
+  "devDependencies": {
+    "@elm-tooling/elm-language-server": "^2.7.0"
+  }
+}
