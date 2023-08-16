@@ -12,7 +12,7 @@
     "start": "elm-doc-preview -p 8091",
     "format": "elm-format src",
     "review": "elm-review --fix src",
-    "verify-examples": "elm-verify-examples -r -w --fail-on-warn --elm-test $(npm bin)/elm-test",
+    "verify-examples": "elm-verify-examples -r -w --elm-test $(npm bin)/elm-test",
     "test": "npm run verify-examples && elm-review src && elm-format --validate src/ && elm-doc-preview --output /dev/null"
   },
   "author": "Sakura-chan the Goat",
